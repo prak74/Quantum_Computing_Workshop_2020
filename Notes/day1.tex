@@ -1,0 +1,84 @@
+\documentclass{article}
+
+% Use Packages ============================
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{ragged2e}
+\usepackage{listings}
+\usepackage{multicol}
+\usepackage{url}
+\usepackage{hyperref}
+
+% Listing Setup =============================
+\lstset{
+    language=python,
+    numbers=left,
+    breaklines=true,
+    commentstyle=\color{green!50!black},
+    keywordstyle=\color{blue}\bfseries,
+    numberstyle=\tiny\color{black!30},
+}
+
+% Title ===================================
+\title{Day 1 Quantum Computing Basics}
+\author{Prakhar Mittal}
+
+\begin{document}
+    
+\maketitle
+\tableofcontents
+
+\newpage
+
+\section{Basic Linear Algebra}
+The world of quanntum computing demands a small fee of understanding of the basics of 
+Vector Spaces and Linear Algebra. So here's a short intro/revision of them.
+
+    \subsection{Vector Spaces}
+    A \emph{vector space} $V$ over the field of complex numbers $\mathbb{C}$ is a non-empty set of elements called vectors
+    . In $V$, it is defined the operations of vector addition and multiplication of a vector by a scalar in
+    $\mathbb{C}$. The addition operation is associative and commutative. It also obeys properties 
+    \begin{itemize}
+        \item There is an element $0 \in V$, such that, for each $\mathbf{v} \in V, \mathbf{v}+0=0+\mathbf{v}=\mathbf{v}$
+        (existence of a neutral element) 
+    \end{itemize}
+
+
+\newpage
+
+\section{Gates}
+Just like the classical circuits, the quantum circuits will also have some gates like
+the AND OR NOT gates, which would be used for computations between qubits.
+The gates can be represented as martices.
+
+
+\begin{multicols}{2}
+    \begin{align*}
+        \mathbf{Pauli-X} &= \begin{bmatrix}
+                                0 & 1 \\
+                                1 & 0
+                            \end{bmatrix}\\
+    \mathbf{Pauli-Y} &= \begin{bmatrix}
+                                0 & -i \\
+                                i & 0
+                            \end{bmatrix}\\
+    \mathbf{Pauli-Z} &= \begin{bmatrix}
+                                0 & -1 \\
+                                1 & 0
+                            \end{bmatrix}\\
+    \mathbf{I} &= \begin{bmatrix}
+                                1 & 0 \\
+                                0 & 1
+                            \end{bmatrix}\\
+    \mathbf{cnot}
+    \end{align*}
+
+\end{multicols}
+
+
+
+
+
+
+\end{document}
